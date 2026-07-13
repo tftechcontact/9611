@@ -119,19 +119,33 @@ h1 {
   object-fit: cover;
 }
 
-/* Standalone, full-width container exclusively for plumbing bullet points */
-.isolated-bullet-box {
+/* Bottom layout row pairing the list side-by-side with the contact card */
+.bottom-split-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
   width: 100%;
+}
+
+/* Condensed container exclusively for plumbing bullet points */
+.isolated-bullet-box {
+  flex: 1.2;
   padding: 25px;
   border: 5px solid gray;
   background-color: #ffffff;
 }
 
-/* Distinct bottom layout section for isolated call to action elements */
+/* Completely external right-aligned container holding the centered contact items */
 .isolated-contact-box {
-  width: 100%;
+  flex: 1;
   padding: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .center-contact-section {
@@ -195,56 +209,61 @@ h1 {
       </div>
     </div>
 
-    <div class="isolated-bullet-box">
-      <h2> The many Plumbing Services we provide </h2>
-      <div style="margin-top: 10px; padding-left: 20px;">
-        <ul>
-          <li> Water Line Service </li>
-          <li> Toilet Repair/Install </li>
-          <li> Low flow toilets </li>
-          <li> Hot water heaters </li>
-          <li> Water Heater installation & Repair </li>
-          <li> Water heater repair or replacement </li>
-          <li> Faucet Installation   </li>
-          <li> Hot Water Recirculation System </li>
-          <li> Kitchen faucet repair or replacement </li>
-          <li> Septic System Tank Repair </li>
-          <li> Water pipes </li>
-          <li> Drain cleaning </li>
-          <li> Sewage system </li>
-          <li> Toilet Replace and Repair </li>
-          <li> *Toilet & urinal repair or replacement </li>
-          <li> Washing machine hookups </li>
-          <li> Full Service Plumbing and Drain Repairs, Commercial </li>
-          <li> Water Heater Installation </li>
-          <li> Water filtration systems </li>
-          <li> Sewer lines </li>
-          <li> Toilet repair </li>
-          <li> Bathtub Rooting </li>
-          <li> Ice maker </li>
-          <li> Tankless Water Heater System </li>
-          <li> Hot Water Recirculation System </li>
-          <li> Rooter services </li>
-          <li> Gas Leak Detecting and Repaired </li>
-          <li> Sewer Lines Installed and Repaired </li>
-          <li> Copper Repipe and Repair </li>
-          <li> Garbage Disposal Installation </li>
-          <li> Garbage disposal repair or replacement </li>
-          <li> Hydro Jetting Service </li>
-          <li> Installation of gas shut </li>
-          <li> Install faucetsBathroom Sink Rooting </li>
-          <li> Leaky Faucet </li>
-          <li> Backflow prevention </li> 
-        </ul> 
+    <!-- New flex row container structuring the condensed list next to the contact elements -->
+    <div class="bottom-split-layout">
+      
+      <div class="isolated-bullet-box">
+        <h2> The many Plumbing Services we provide </h2>
+        <div style="margin-top: 10px; padding-left: 20px;">
+          <ul>
+            <li> Water Line Service </li>
+            <li> Toilet Repair/Install </li>
+            <li> Low flow toilets </li>
+            <li> Hot water heaters </li>
+            <li> Water Heater installation & Repair </li>
+            <li> Water heater repair or replacement </li>
+            <li> Faucet Installation   </li>
+            <li> Hot Water Recirculation System </li>
+            <li> Kitchen faucet repair or replacement </li>
+            <li> Septic System Tank Repair </li>
+            <li> Water pipes </li>
+            <li> Drain cleaning </li>
+            <li> Sewage system </li>
+            <li> Toilet Replace and Repair </li>
+            <li> *Toilet & urinal repair or replacement </li>
+            <li> Washing machine hookups </li>
+            <li> Full Service Plumbing and Drain Repairs, Commercial </li>
+            <li> Water Heater Installation </li>
+            <li> Water filtration systems </li>
+            <li> Sewer lines </li>
+            <li> Toilet repair </li>
+            <li> Bathtub Rooting </li>
+            <li> Ice maker </li>
+            <li> Tankless Water Heater System </li>
+            <li> Hot Water Recirculation System </li>
+            <li> Rooter services </li>
+            <li> Gas Leak Detecting and Repaired </li>
+            <li> Sewer Lines Installed and Repaired </li>
+            <li> Copper Repipe and Repair </li>
+            <li> Garbage Disposal Installation </li>
+            <li> Garbage disposal repair or replacement </li>
+            <li> Hydro Jetting Service </li>
+            <li> Installation of gas shut </li>
+            <li> Install faucetsBathroom Sink Rooting </li>
+            <li> Leaky Faucet </li>
+            <li> Backflow prevention </li> 
+          </ul> 
+        </div>
       </div>
-    </div>
 
-    <div class="isolated-contact-box">
-      <h4> Servicing the Cincinnati & Surrounding Area for over 10 Years</h4>
-      <div class="center-contact-section">
-        <p> Call Now for a Risk Free Estimate 513-540-4734 </p>
-        <a href="mailto:@gmail.com" target="_blank" class="email-button">Send Email</a>
+      <div class="isolated-contact-box">
+        <h4> Servicing the Cincinnati & Surrounding Area for over 10 Years</h4>
+        <div class="center-contact-section">
+          <p> Call Now for a Risk Free Estimate 513-540-4734 </p>
+          <a href="mailto:@gmail.com" target="_blank" class="email-button">Send Email</a>
+        </div>
       </div>
+
     </div>
 
   </div>
