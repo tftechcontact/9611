@@ -88,18 +88,27 @@ h1 {
   background-color: #f4f4f4; 
 }
 
+/* Two-column introductory flex container splitting text and image */
+.intro-split-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+
 .p-main {
+  flex: 1.2;
   color: #251803;
   font-family: courier;
   font-size: 15px;
 }
 
-/* Static image element container replacing the old carousel */
 .single-image-container {
-  width: 100%;
-  max-width: 600px;
-  height: 400px;
-  margin: 10px auto;
+  flex: 1;
+  max-width: 500px;
+  height: 350px;
   border: 1px solid #ccc;
   overflow: hidden;
 }
@@ -110,32 +119,19 @@ h1 {
   object-fit: cover;
 }
 
-/* Expanded layout parameters matching main viewport constraints */
-.combined-content-box {
+/* Standalone, full-width container exclusively for plumbing bullet points */
+.isolated-bullet-box {
   width: 100%;
-  max-width: 100%;
-  margin: 0;
   padding: 25px;
   border: 5px solid gray;
   background-color: #ffffff;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 30px;
 }
 
-.left-column {
-  flex: 1.2; /* Extra space allocation for comprehensive services listing */
-}
-
-.right-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  text-align: left;
+/* Distinct bottom layout section for isolated call to action elements */
+.isolated-contact-box {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
 }
 
 .center-contact-section {
@@ -186,82 +182,75 @@ h1 {
   </div>
 
   <div class="main">
-    <div class="p-main">
-      <p> Fast, Affordable Plumbing Service – Done Right the First Time </p>
-      <p> Got a leak, clog, or no hot water? Don’t wait until it turns into a bigger (and more expensive) problem.  We provide fast, reliable Residential & Light Commercial plumbing services 
-        with UpFront Pricing and No Surprises. We provide Same-Day Emergency services, and respond fast! You'll be hiring a Master plumber who is always on time and at affordable price!  </p>
-        No need to look further, you've found a Trusted Local Plumbing Company with upfront, honest pricing – No Hidden Fees. </li>
-            
-    </div>
-
-    <div class="single-image-container">
-      <img src="9601.jpg" alt="Plumbing Service Showcase">
-    </div>
-
-    <div class="combined-content-box">
-      <div class="left-column">
-        <h2> The many Plumbing Services we provide </h2>
-        <div style="margin-top: 10px; padding-left: 20px;">
-          <ul>
-            <li> Water Line Service </li>
-            <li> Toilet Repair/Install </li>
-            <li> Low flow toilets </li>
-            <li> Hot water heaters </li>
-            <li> Water Heater installation & Repair </li>
-            <li> Water heater repair or replacement </li>
-            <li> Faucet Installation   </li>
-            <li> Hot Water Recirculation System </li>
-            <li> Kitchen faucet repair or replacement </li>
-            <li> Septic System Tank Repair </li>
-            <li> Water pipes </li>
-            <li> Drain cleaning </li>
-            <li> Sewage system </li>
-            <li> Toilet Replace and Repair </li>
-            <li> *Toilet & urinal repair or replacement </li>
-            <li> Washing machine hookups </li>
-            <li> Full Service Plumbing and Drain Repairs, Commercial </li>
-            <li> Water Heater Installation </li>
-            <li> Water filtration systems </li>
-            <li> Sewer lines </li>
-            <li> Toilet repair </li>
-            <li> Bathtub Rooting </li>
-            <li> Ice maker </li>
-            <li> Tankless Water Heater System </li>
-            <li> Hot Water Recirculation System </li>
-            <li> Rooter services </li>
-            <li> Gas Leak Detecting and Repaired </li>
-            <li> Sewer Lines Installed and Repaired </li>
-            <li> Copper Repipe and Repair </li>
-            <li> Garbage Disposal Installation </li>
-            <li> Garbage disposal repair or replacement </li>
-            <li> Hydro Jetting Service </li>
-            <li> Installation of gas shut </li>
-            <li> Install faucetsBathroom Sink Rooting </li>
-            <li> Leaky Faucet </li>
-            <li> Backflow prevention </li> 
-          </ul> 
-        </div>
+    
+    <div class="intro-split-row">
+      <div class="p-main">
+        <p> Fast, Affordable Plumbing Service – Done Right the First Time </p>
+        <p> Got a leak, clog, or no hot water? Don’t wait until it turns into a bigger (and more expensive) problem. We provide fast, reliable Residential & Light Commercial plumbing services with UpFront Pricing and No Surprises. We provide Same-Day Emergency services, and respond fast! You'll be hiring a Master plumber who is always on time and at affordable price! </p>
+        <p> No need to look further, you've found a Trusted Local Plumbing Company with upfront, honest pricing – No Hidden Fees. </p>     
       </div>
 
-      <!-- <div class="right-column">
-       
-        </div> -->
-        
-        <div style="padding-left: 20px; width: 100%;">
-          <h4> Servicing the Cincinnati & Surrounding Area for over 10 Years</h4>
-          <div class="center-contact-section">
-            <p> Call Now for a Risk Free Estimate 513-540-4734 </p>
-            <a href="mailto:@gmail.com" target="_blank" class="email-button">Send Email</a>
-          </div>
-        </div>
-      </div> 
+      <div class="single-image-container">
+        <img src="9611.jpg" alt="Plumbing Service Showcase">
+      </div>
+    </div>
+
+    <div class="isolated-bullet-box">
+      <h2> The many Plumbing Services we provide </h2>
+      <div style="margin-top: 10px; padding-left: 20px;">
+        <ul>
+          <li> Water Line Service </li>
+          <li> Toilet Repair/Install </li>
+          <li> Low flow toilets </li>
+          <li> Hot water heaters </li>
+          <li> Water Heater installation & Repair </li>
+          <li> Water heater repair or replacement </li>
+          <li> Faucet Installation   </li>
+          <li> Hot Water Recirculation System </li>
+          <li> Kitchen faucet repair or replacement </li>
+          <li> Septic System Tank Repair </li>
+          <li> Water pipes </li>
+          <li> Drain cleaning </li>
+          <li> Sewage system </li>
+          <li> Toilet Replace and Repair </li>
+          <li> *Toilet & urinal repair or replacement </li>
+          <li> Washing machine hookups </li>
+          <li> Full Service Plumbing and Drain Repairs, Commercial </li>
+          <li> Water Heater Installation </li>
+          <li> Water filtration systems </li>
+          <li> Sewer lines </li>
+          <li> Toilet repair </li>
+          <li> Bathtub Rooting </li>
+          <li> Ice maker </li>
+          <li> Tankless Water Heater System </li>
+          <li> Hot Water Recirculation System </li>
+          <li> Rooter services </li>
+          <li> Gas Leak Detecting and Repaired </li>
+          <li> Sewer Lines Installed and Repaired </li>
+          <li> Copper Repipe and Repair </li>
+          <li> Garbage Disposal Installation </li>
+          <li> Garbage disposal repair or replacement </li>
+          <li> Hydro Jetting Service </li>
+          <li> Installation of gas shut </li>
+          <li> Install faucetsBathroom Sink Rooting </li>
+          <li> Leaky Faucet </li>
+          <li> Backflow prevention </li> 
+        </ul> 
+      </div>
+    </div>
+
+    <div class="isolated-contact-box">
+      <h4> Servicing the Cincinnati & Surrounding Area for over 10 Years</h4>
+      <div class="center-contact-section">
+        <p> Call Now for a Risk Free Estimate 513-540-4734 </p>
+        <a href="mailto:@gmail.com" target="_blank" class="email-button">Send Email</a>
+      </div>
     </div>
 
   </div>
 
   <div class="footer">
     <p>&copy; <b> Reliable & Affordable Plumbing Service </b> 2026 All Rights Reserved.</p> 
-    
   </div>
 
 </div>
